@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <style>
+        .col-4 {
+            width: 33%;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUNBfM93rA5QqagJDsZNZjPKw46Y-iQ-Q&callback=initMap&libraries=&v=weekly" async></script>
+    <title>3</title>
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-dark bg-dark text-light">
+        <div class="container-fluid w-50">
+            <span class="navbar-brand mb-2 h1 text-warning m-auto">LEARNING HOW TO WORK WITH APIs</span>
+            <select id="countries-select-form" class="form-select" aria-label="Default select example">
+                <option selected>Open this select menu</option>
+            </select>
+        </div>
+    </nav>
+    <!-- body -->
+    <!-- info -->
+    <div class="d-flex flex-wrap justify-content-between mt-2" style="width: 99%;margin: 0 auto;">
+        <div class=" card col-4 bg-dark text-light p-1">
+            <div class="card-body">
+                <h5 id="country-name" class="card-title">Country Name</h5>
+                <div class="d-flex">
+                    <span class="text-warning">Native Name:&nbsp;</span>
+                    <p id="native-name" class="card-text text-light">---</p>
+                </div>
+                <div class="d-flex">
+                    <span class="text-warning">Capital:&nbsp;</span>
+                    <p id="capital" class="card-text text-light">---</p>
+                </div>
+                <div class="d-flex">
+                    <span class="text-warning">Region:&nbsp;</span>
+                    <p id="region" class="card-text text-light">---</p>
+                </div>
+                <div class="d-flex">
+                    <span class="text-warning">Population:&nbsp;</span>
+                    <p id="population" class="card-text text-light">---</p>
+                </div>
+                <div class="d-flex">
+                    <span class="text-warning">Languages:&nbsp;</span>
+                    <p id="languages" class="card-text text-light">---</p>
+                </div>
+                <div class="d-flex">
+                    <span class="text-warning">Timezones:&nbsp;</span>
+                    <p id="timezones" class="card-text text-light">---</p>
+                </div>
+            </div>
+        </div>
+        <!-- calling code -->
+        <div class="card col-4 bg-dark text-light">
+            <div class="card-header">
+                <h5 class="card-title text-center">CALLING CODE</h5>
+            </div>
+            <div class="card-body bg-warning">
+                <p id="calling-codes" class="text-center text-dark" style="font-size:80px">---</p>
+            </div>
+        </div>
+        <!-- flag -->
+        <div id="flag-container" class="card col-4">
+        </div>
+        <!-- weather report -->
+        <div class="card col-4 bg-dark text-dark mt-2">
+            <div class="card-header">
+                <h6 class="card-title text-center text-warning">CAPITAL WEATHER REPORT</h6>
+            </div>
+            <div class="card-body bg-light">
+                <div class="bg-warning rounded">
+                    <img id="weather-pic" src="" class="mx-auto d-block" alt="">
+                </div>
+                <div id="weather-description" class="text-warning text-center mx-auto d-block">---</div>
+                <div class="d-flex">
+                    <span>Wind Speed:&nbsp;</span>
+                    <p id="wind-speed" class="card-text text-success">---</p>MS
+                </div>
+                <div class="d-flex">
+                    <span>Temprature:&nbsp;</span>
+                    <p id="temprature" class="card-text text-success">---</p>C
+                </div>
+                <div class="d-flex">
+                    <span>Humidity:&nbsp;</span>
+                    <p id="humidity" class="card-text text-success">---</p>%
+                </div>
+                <div class="d-flex">
+                    <span>Visibility:&nbsp;</span>
+                    <p id="visibility" class="card-text text-success">---</p>m
+                </div>
+            </div>
+        </div>
+        <!-- map -->
+        <div class="card col-8 mt-2">
+            <div id="map" class="card-body">
+
+            </div>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+
+</html>
